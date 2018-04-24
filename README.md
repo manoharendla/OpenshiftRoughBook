@@ -320,3 +320,11 @@ using rysnc copied the binary to Jenkins plugin folder and upon restart of jenki
 
 Anlaysing on making use of s2i to create a customized build. Worked on a sample lighttpd example . Created a build and executed using oc new-app 
 
+# 24/04/2018
+Created a builder image  in my host machine using docker. How would I push that image to our internal docker registry with IP adress (172.**.**.** :5000) so that I can view that image in openshift dasboard and consume this image to create an application.
+
+using oc-new image name deployment is failing with different errors each time. 
+
+
+# 25/04/2018
+oc export all --as-template=<template_name>
