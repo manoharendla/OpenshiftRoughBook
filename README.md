@@ -328,3 +328,66 @@ using oc-new image name deployment is failing with different errors each time.
 
 # 25/04/2018
 oc export all --as-template=<template_name>
+oc export -h
+
+## Create a build config
+
+buildConfig.yaml
+```
+{
+  "kind": "BuildConfig",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "ruby-20-centos7-build"
+  },
+  "spec": {
+    "triggers": [
+      {
+        "type": "GitHub",
+        "github": {
+          "secret": "secret101"
+        }
+      }
+    ],
+    "source": {
+      "type": "Git",
+      "git": {
+        "uri": "https://github.com/openshift/sti-ruby"
+      }
+    },
+    "strategy": {
+      "type": "Custom",
+      "customStrategy": {
+        "from": {
+          "kind": "DockerImage",
+          "name": "openshift/sti-image-builder"
+        },
+        "env": [
+          {
+            "name": "IMAGE_NAME",
+            "value": "openshift/ruby-20-centos7"
+          },
+          {
+            "name": "CONTEXT_DIR",
+            "value": "/2.0/"
+          }
+        ],
+        "exposeDockerSocket": true
+      }
+    },
+    "output": {
+      "to": {
+        "kind": "ImageStreamTag",
+        "name": "ruby-20-centos7:latest"
+      }
+    }
+  }
+}
+```
+
+
+`oc create -f buildConfig.yaml`
+`oc start-build ruby-20-centos7-build`
+
+
+
