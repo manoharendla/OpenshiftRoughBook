@@ -1,10 +1,10 @@
 # 25/04/2018
 
-Created a cusotmized docker image having  customized config.xml file, configured with creds etc
-with docker run Jenkins is up and running
-Pushed the image to openshift registry
-From openshift tried to deploy an new applicaiton using deploy image , deployment is getting succeeded but routes are not getting created. Pod is running good and from logs Jenkins is fully up and runnning 
-Manually tried to create a route but still it didn't help
+1. Created a cusotmized docker image having  customized config.xml file, configured with creds etc
+2. with docker run Jenkins is up and running
+3. Pushed the image to openshift registry
+4. From openshift tried to deploy an new applicaiton using deploy image , deployment is getting succeeded but routes are not getting created. Pod is running good and from logs Jenkins is fully up and runnning 
+5. Manually tried to create a route but still it didn't help
 
 
 # RoughBook
