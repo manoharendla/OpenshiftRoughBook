@@ -1,3 +1,36 @@
+# 26/04/2018 
+## Prerequisite :
+1. Create config map for saxona and maven settings.xml 
+
+
+## Using Jenkkins default template
+1. oc project s2i
+2. oc new-build https://github.com/manoharendla/AutomateJenkins.git --context-dir=. --strategy=docker
+
+
+## Using a custom docker image
+1. git clone https://github.com/manoharendla/AutomateJenkins.git
+2. docker build -t jenkins-cicd .
+3. docker tag & docker push to docker/openshift registry
+4. oc project s2i
+5. oc import-image s2i --from=docker.io/docmaster/jenkins-cicd --confirm-all
+6. oc new-app jenkins-cicd-ephernam -p NAMESPACE=s2i -p JENKINS_IMAGE_STREAM_TAG=jenkins-cicd:latest
+
+
+## Using  template
+1. Build a custom image as shown above
+2. oc create -f https://raw.githubusercontent.com/manoharendla/AutomateJenkins/master/jenkins-master-s2i.yml
+3. oc new-app jenkins-master-s2i -p JENKINS_IMAGE=docker.io/dockmaster/jenkins-cicd:latest
+
+
+## Using persistent template
+1. oc create -f https://raw.githubusercontent.com/manoharendla/AutomateJenkins/master/jenkins-persistent.yml
+2. oc new-app <app-name>
+
+
+
+
+
 # 25/04/2018
 
 1. Created a cusotmized docker image having  customized config.xml file, configured with creds etc
