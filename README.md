@@ -2,8 +2,8 @@
 ## OpenIssues
 1. Cannot install JDK 1.7 that is needed for some of the jobs.
   *Approaches Tried:*
-  i. Using ManageJenkins -> GlobalToolConfiguration-> Install JDK from SUN(Install failed with connection refused while downloading     packages from Sun site) 
-  ii. Using package installation apporach : Downloaded the package from SUN to mac. Using rsync copy the installable to pod, unzip and untar the file and provide the command details in  ManageJenkins -> GlobalToolConfiguration. Again it failed to execute the Java 7
+  * Using ManageJenkins -> GlobalToolConfiguration-> Install JDK from SUN(Install failed with connection refused while downloading     packages from Sun site) 
+  * Using package installation apporach : Downloaded the package from SUN to mac. Using rsync copy the installable to pod, unzip and untar the file and provide the command details in  ManageJenkins -> GlobalToolConfiguration. Again it failed to execute the Java 7
  
 2. RPM-BUILD: Some jobs are getting failed due to rpmbuild package missing on the pod, to install this package we need sudo permissions
 3. SMTP ERROR : Need smtp server details to configure
