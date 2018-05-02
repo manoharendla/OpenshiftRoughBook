@@ -1,6 +1,21 @@
+# 02/05/2018
+## OpenIssues
+1. Cannot install JDK 1.7 that is needed for some of the jobs.
+  *Approaches Tried:*
+  i. Using ManageJenkins -> GlobalToolConfiguration-> Install JDK from SUN(Install failed with connection refused while downloading     packages from Sun site) 
+  ii. Using package installation apporach : Downloaded the package from SUN to mac. Using rsync copy the installable to pod, unzip and untar the file and provide the command details in  ManageJenkins -> GlobalToolConfiguration. Again it failed to execute the Java 7
+ 
+2. RPM-BUILD: Some jobs are getting failed due to rpmbuild package missing on the pod, to install this package we need sudo permissions
+3. SMTP ERROR : Need smtp server details to configure
+4. DEFAULT Setting : While doing build, build is looking for settings.xml file and failing with DEFAULT SETTINGS.XML FILE not found error. Can be automated using openshift config maps. 
+
+Note: As part of migration, numerous plugins has been installed on the pod using oc rsync 
+  
+
+
 # 26/04/2018 
 ## Prerequisite :
-1. Create config map for saxona and maven settings.xml 
+1. Create config map for saxon and maven settings.xml 
 
 
 ## Using Jenkkins default template
