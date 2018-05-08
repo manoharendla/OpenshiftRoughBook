@@ -1,8 +1,8 @@
 # 08/05/2018
 ## Using template:
-oc create -f https://raw.githubusercontent.com/siamaksade/jenkins-s2i-example/master/jenkins-master-s2i-template.yaml
-oc new-app jenkins-master-s2i
-'''
+1. oc create -f https://raw.githubusercontent.com/siamaksade/jenkins-s2i-example/master/jenkins-master-s2i-template.yaml
+2. oc new-app jenkins-master-s2i
+'''yaml
 Cloning "https://github.com/siamaksade/jenkins-s2i-example.git " ...
 	Commit:	29d91a30887a295e54583e7b9157a6c2532ada63 (added metadata to Dockerfile)
 	Author:	Siamak Sadeghianfar <ssadeghi@redhat.com>
