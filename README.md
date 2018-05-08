@@ -2,7 +2,7 @@
 ## Using template:
 1. oc create -f https://raw.githubusercontent.com/siamaksade/jenkins-s2i-example/master/jenkins-master-s2i-template.yaml
 2. oc new-app jenkins-master-s2i
-'''yaml
+```yaml
 Cloning "https://github.com/siamaksade/jenkins-s2i-example.git " ...
 	Commit:	29d91a30887a295e54583e7b9157a6c2532ada63 (added metadata to Dockerfile)
 	Author:	Siamak Sadeghianfar <ssadeghi@redhat.com>
@@ -11,7 +11,7 @@ Pulling image "registry.access.redhat.com/openshift3/jenkins-1-rhel7@sha256:ccb6
 ERROR: Error writing header for "scripts": io: read/write on closed pipe
 ERROR: Error writing tar: io: read/write on closed pipe
 error: build error: Error response from daemon: {"message":"create 285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e: error while creating volume path '/var/lib/docker/volumes/285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e/_data': mkdir /var/lib/docker/volumes/285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e: permission denied"}
-'''
+```
 
 
 # 02/05/2018
