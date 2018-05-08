@@ -12,7 +12,10 @@ ERROR: Error writing header for "scripts": io: read/write on closed pipe
 ERROR: Error writing tar: io: read/write on closed pipe
 error: build error: Error response from daemon: {"message":"create 285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e: error while creating volume path '/var/lib/docker/volumes/285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e/_data': mkdir /var/lib/docker/volumes/285619fe21e31b15088ba552e95797092cb79c8d276c8f54f76813b6f738ff0e: permission denied"}
 ```
-
+*Steps to do*:
+1. Export the yaml file of the manually created jenkins
+2. Compare that with siamaksade yaml file 
+3. List down the changes that can go into it
 
 # 02/05/2018
 ## OpenIssues
