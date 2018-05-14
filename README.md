@@ -1,3 +1,12 @@
+# 14/05/2018
+##  Automating with Puppet.
+1. We need a base image with Centos7 to have a puppet module that can install and configure jenkins from scratch 
+2. Or we have an option to just configure Jobs and configure Jenkins (like github-jenkins ssh, maven settings etc). Currently working on this
+3. In discussions with other team, demonstrated the different ways tried to automate the Openshift Jenkins
+4. Investigating on Helm tool to see if this can be used. 
+
+
+
 # 08/05/2018
 ## Using template:
 1. oc create -f https://raw.githubusercontent.com/siamaksade/jenkins-s2i-example/master/jenkins-master-s2i-template.yaml
