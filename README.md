@@ -1,3 +1,11 @@
+# 18/05/2018
+1. Using Helm charts we are able to bring up a jenkins instance (tried for non persistent)
+2. There is some configuration with which we can create a persistent Jenkins instance, but when brought up a Jenkins instance using Persistent parameters, pod is not comming up .
+3. Checking with the team and doing a follow up 
+4. With the use of helm, I see we can automate the complete Jenkins, once these issues are resolved.
+5. Until this is solved, looking on on how to automate the maven settings file, gitub secret key for external github, ssh keys, saxon file etc and also the plugins installation process. 
+
+
 # 14/05/2018
 ##  Automating with Puppet.
 1. We need a base image with Centos7 to have a puppet module that can install and configure jenkins from scratch 
